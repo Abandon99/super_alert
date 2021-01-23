@@ -1,13 +1,10 @@
-const axios = require('axios')
+const sendMessage = require('./sendMessage.js')
+
 
 const ALERT_TIME = 10
 let todayHasCalled = false
 let shadowHous = (new Date()).getHours()
 
-const sendMessage = (msg) => {
-    return axios
-        .get('https://sc.ftqq.com/SCU153669T5eee827e527d52b70ed8d2c56c97a446600b1789ecae4.send?text=' + encodeURI(msg))
-}
 
 const callMe = () => {
     const nowHour = (new Date()).getHours()
@@ -36,4 +33,4 @@ const callMe = () => {
     
 }
 
-const sendMessageTimer = setInterval(callMe, 1000 * 10)
+const sendMessageTimer = setInterval(callMe, 1000 * 60 * 15)
