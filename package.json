@@ -4,7 +4,10 @@
   "description": "",
   "main": "http.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development node index.js",
+    "start": "NODE_ENV=production node index.js",
+    "test_task": "NODE_ENV=production pm2 start index.js"
   },
   "repository": {
     "type": "git",
